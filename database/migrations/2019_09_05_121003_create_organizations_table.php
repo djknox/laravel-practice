@@ -15,6 +15,7 @@ class CreateOrganizationsTable extends Migration
     {
         Schema::create('organizations', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('user_id')->unsigned()->nullable();
             $table->string('name');
             $table->string('location');
             $table->string('description');
